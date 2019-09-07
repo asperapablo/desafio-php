@@ -46,6 +46,7 @@ $objColProduto = $produto->getAll();
                 <th>ID</th>
                 <th>Tipo produto</th>
                 <th>Nome</th>
+                <th>Valor</th>
                 <th>Ações</th>
             </tr>
             </thead>
@@ -55,6 +56,7 @@ $objColProduto = $produto->getAll();
                     <td><?=$objProduto['id']?></td>
                     <td><?=$objProduto['tipo_produto_nome']?></td>
                     <td><?=$objProduto['nome']?></td>
+                    <td><?=$objProduto['valor']?></td>
                     <td>
                         <a href="/produtos/edit.php?id=<?=$objProduto['id']?>" class="orange lighten-1 btn-small"><i class="material-icons left">edit</i> Editar</a>
                         <a href="/produtos/remove.php?id=<?=$objProduto['id']?>" class="red lighten-1 btn-small"><i class="material-icons left">remove</i> Remover</a>

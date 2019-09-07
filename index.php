@@ -29,16 +29,10 @@
             </div>
         </nav>
         <div class="container">
-            <div class="row" style="margin-top: 15px;">
-                <div class="col s2">
-                    <a href="/vendas.php" class="waves-effect waves-light btn">Vendas</a>
-                </div>
-                <div class="col s2">
-                    <a href="/produtos/index.php" class="waves-effect waves-light btn">Produtos</a>
-                </div>
-                <div class="col s2">
-                    <a href="/tipos_produto/index.php" class="waves-effect waves-light btn">Tipos produto</a>
-                </div>
+            <div class="row" style="margin-top: 15px">
+                <a href="/vendas.php" class="waves-effect waves-light btn">Vendas</a>
+                <a href="/produtos/index.php" class="waves-effect waves-light btn">Produtos</a>
+                <a href="/tipos_produto/index.php" class="waves-effect waves-light btn">Tipos produto</a>
             </div>
         </div>
 

@@ -16,7 +16,10 @@ class Produto extends DB {
 
     public function getAll()
     {
-        $sql = "SELECT produto.*, tipo_produto.nome as tipo_produto_nome FROM produto ";
+        $sql = "SELECT ";
+        $sql .= "produto.*, tipo_produto.nome as tipo_produto_nome, ";
+        $sql .= "tipo_produto.percentual_imposto ";
+        $sql .= "FROM produto ";
         $sql .= "INNER JOIN ";
         $sql .= "tipo_produto ";
         $sql .= "ON ";
@@ -39,19 +42,20 @@ class Produto extends DB {
         return $this->select($sql, false);
     }
 
-    public function insert($tipo_produto_id, $nome)
+    public function insert($tipo_produto_id, $nome, $valor)
     {
         $sql = "INSERT INTO produto ";
-        $sql .= "(tipo_produto_id, nome) ";
+        $sql .= "(tipo_produto_id, nome, valor) ";
         $sql .= "VALUES ";
-        $sql .= "($tipo_produto_id, '$nome') ";
+        $sql .= "($tipo_produto_id, '$nome', $valor) ";
 
         return $this->exec($sql);
     }
 
-    public function update($id, $tipo_produto_id, $nome)
+    public function update($id, $tipo_produto_id, $nome, $valor)
     {
         $sql = "UPDATE produto SET ";
+        $sql .= "valor = $valor, ";
         $sql .= "tipo_produto_id = $tipo_produto_id, ";
         $sql .= "nome = '$nome' ";
         $sql .= "WHERE ";

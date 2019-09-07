@@ -12,7 +12,7 @@ require_once __DIR__ ."/../models/TipoProduto.php";
 $tipoProduto = new TipoProduto();
 
 if(!empty($_POST)){
-    $res = $produto->insert($_POST['tipo_produto_id'], $_REQUEST['nome']);
+    $res = $produto->insert($_POST['tipo_produto_id'], $_POST['nome'], $_POST['valor']);
 }
 
 $objColTipoProduto = $tipoProduto->getAll();
@@ -48,11 +48,15 @@ $objColTipoProduto = $tipoProduto->getAll();
     <div class="row" style="margin-top: 15px;">
         <form method="post" class="col s12">
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s4">
                     <input type="text" class="validate" id="nome" name="nome" required>
                     <label for="nome">Nome do produto</label>
                 </div>
-                <div class="input-field col s6">
+                <div class="input-field col s4">
+                    <input type="number" class="validate" id="valor" name="valor" step="0.01" required>
+                    <label for="valor">Valor do produto</label>
+                </div>
+                <div class="input-field col s4">
                     <select name="tipo_produto_id" id="tipo_produto_id" required>
                         <option value="" disabled selected>Selecione uma opção</option>
                         <?php foreach($objColTipoProduto as $objTipoProduto): ?>

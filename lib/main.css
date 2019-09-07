@@ -1,0 +1,61 @@
+h3{
+    margin: 0;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+h3:after{
+    content: ' ';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    height: 3px;
+    width: calc(100% / 3);
+    background: #000000;
+}
+ul li{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+ul li.header{
+    font-weight: bold;
+}
+ul li.header{
+
+}
+ul li span{
+    display: flex;
+}
+
+.line{
+    height: 1px;
+    background: #000000;
+    width: 100%;
+    display: block;
+}
+.card.carrinho{
+    height: 100%;
+    max-height: 700px;
+}
+.row.produtos{
+    align-items: start;
+}
+.row.produtos .btn{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+}
+
+table th:first-child, table td:first-child{
+    text-align: left;
+}
+table th, table td{
+    text-align: center;
+}
+table th:last-child, table td:last-child{
+    text-align: right;
+}
