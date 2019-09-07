@@ -14,7 +14,7 @@ class Produto extends DB {
         parent::__construct();
     }
 
-    public function getAll()
+    public function getAll($tipo_produto_id = null)
     {
         $sql = "SELECT ";
         $sql .= "produto.*, tipo_produto.nome as tipo_produto_nome, ";
@@ -24,6 +24,10 @@ class Produto extends DB {
         $sql .= "tipo_produto ";
         $sql .= "ON ";
         $sql .= "tipo_produto.id = produto.tipo_produto_id ";
+        if(!empty($tipo_produto_id)){
+            $sql .= "WHERE ";
+            $sql .= "produto.tipo_produto_id = $tipo_produto_id ";
+        }
         $sql .= "ORDER BY id ASC ";
 
         return $this->select($sql);

@@ -56,6 +56,6 @@ table th:first-child, table td:first-child{
 table th, table td{
     text-align: center;
 }
-table th:last-child, table td:last-child{
-    text-align: right;
-}
+/*table th:last-child, table td:last-child{*/
+/*    text-align: right;*/
+/*}*/

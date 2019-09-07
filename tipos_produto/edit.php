@@ -77,9 +77,9 @@ $objTipoProduto = $tipoProduto->get($_GET['id']);
         $('select').formSelect();
 
         <?php if(isset($res) && $res == true): ?>
-        M.toast({html: 'Produto atualizado!'});
+        M.toast({html: 'Tipo produto atualizado!'});
         <?php elseif(isset($res)): ?>
-        M.toast({html: 'Erro ao atualizar produto!'});
+        M.toast({html: 'Erro ao atualizar tipo produto!'});
         <?php endif; ?>
     });
 </script>

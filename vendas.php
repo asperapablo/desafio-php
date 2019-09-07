@@ -37,7 +37,7 @@ $objColProduto = $produto->getAll();
 </nav>
 <div class="container">
     <div class="row" style="margin-top: 15px;">
-        <div class="col s8">
+        <div class="col s7">
             <div class="card">
                 <div class="card-content">
                     <h3>Produtos</h3>
@@ -55,7 +55,7 @@ $objColProduto = $produto->getAll();
                 </div>
             </div>
         </div>
-        <div class="col s4">
+        <div class="col s5">
             <div class="card carrinho">
                 <div class="card-content">
                     <h3>Carrinho</h3>
@@ -65,18 +65,10 @@ $objColProduto = $produto->getAll();
                             <th>Quantidade</th>
                             <th>Imposto</th>
                             <th>$</th>
+                            <th>#</th>
                         </thead>
                         <tbody id="listagem"></tbody>
                     </table>
-                    <div class="line"></div>
-                    <div class="total imposto">
-                        <span>Total impostos</span>
-                        <span class="valor"></span>
-                    </div>
-                    <div class="total geral">
-                        <span>Total geral</span>
-                        <span class="valor"></span>
-                    </div>
                 </div>
             </div>
         </div>
